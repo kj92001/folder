@@ -1,6 +1,5 @@
 <head>
   <meta charset="UTF-8">
-   </style>
 </head>
 <body>
   <div class="image-wrapper">
