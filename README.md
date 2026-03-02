@@ -14,6 +14,6 @@
   <b> 삭제기능 추가과 관리자 폴더 이동전용 스위치 넣음 </b>
   <b> https://github.com/kj92001/folder/releases/download </b>
   <a href="folder1.0.zip" download>deb 파일 다운로드</a>
-  <a href="folder.zpi" download>패치 파일 다운로드</a>
+  <a href="folder.zip" download>패치 파일 다운로드</a>
 </body>
 
