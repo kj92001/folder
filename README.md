@@ -13,10 +13,14 @@
   <b>두번째 수정 파일  업그래이드된 파일folder.zip 압축 풀면 실행 파일 생김 sudo mv -rf folder /usr/local/bin </b>
   <b> 삭제기능 추가과 관리자 폴더 이동전용 스위치 넣음 </b>
   <b> https://github.com/kj92001/folder/releases/download </b>
-  <a href="folder1.0.zip" download>deb 파일 다운로드</a>
   <a href="folder.zip" download>패치 파일 다운로드</a>
+
   <div class="image-wrapper">
     <img src="screen2.png" alt="screen" width="400" height="300">
-  </div>    
+  </div> 
+   <pre>
+   <a href="folder.zip" download>패치 파일 다운로드</a>
+   <a href="folder.zip" download>패치 파일 다운로드</a>
+   </pre>
  </body>
 
