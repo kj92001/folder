@@ -19,7 +19,7 @@
     <img src="screen2.png" alt="screen" width="400" height="300">
   </div> 
    <pre>
-   <a href="folder.zip" download>패치 파일 다운로드</a>
+   <a href="folder1.0.zip" download>deb 파일 다운로드</a>
    <a href="folder.zip" download>패치 파일 다운로드</a>
    </pre>
  </body>
