@@ -3,17 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Folder 다운로드 페이지</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
+      margin: 0;              /* 기본 여백 제거 */
+      padding: 20px;
+      text-align: left;       /* 전체 왼쪽 정렬 */
     }
+
     .image-wrapper {
-      margin: 20px 0;
+      margin: 5px 0;          /* 이미지 위아래 간격 최소화 */
     }
+
+    img {
+      display: block;         /* 이미지 아래 여백 제거 */
+      margin: 0;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
     a {
       display: block;
-      margin: 10px;
+      margin: 8px 0;
       font-size: 18px;
     }
   </style>
@@ -21,8 +35,13 @@
 
 <body>
 
+  <!-- 이미지 두 개를 위쪽으로 배치 -->
   <div class="image-wrapper">
     <img src="screen.png" alt="screen" width="400">
+  </div>
+
+  <div class="image-wrapper">
+    <img src="screen2.png" alt="screen2" width="400">
   </div>
 
   <p><b>Folders for quick access. Click a path to navigate, or select a file to open it in gedit.</b></p>
@@ -34,13 +53,9 @@
   <p><b>sudo mv -rf folder /usr/local/bin</b></p>
   <p><b>삭제 기능 추가 및 관리자 폴더 이동 전용 스위치 추가</b></p>
 
-  <p>
-    <a href="https://github.com/kj92001/folder/releases">GitHub Releases 바로가기</a>
-  </p>
-
-  <div class="image-wrapper">
-    <img src="screen2.png" alt="screen2" width="400">
-  </div>
+  <a href="https://github.com/kj92001/folder/releases">
+    GitHub Releases 바로가기
+  </a>
 
   <a href="folder1.0.zip" download>📦 deb 파일 다운로드</a>
   <a href="folder.zip" download>🔧 패치 파일 다운로드</a>
