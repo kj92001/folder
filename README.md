@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>Folder 다운로드 페이지</title>
+    <meta charset="UTF-8">
+    <title>Folder 다운로드 페이지</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; margin: 0; }
+        
+        /* 이미지 두 개를 양 옆으로 배치하는 컨테이너 */
+        .image-container {
+            display: flex;
+            justify-content: flex-start; /* 왼쪽부터 정렬 */
+            gap: 20px; /* 이미지 사이 간격 */
+            margin-bottom: 20px;
+        }
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;              /* 기본 여백 제거 */
-      padding: 20px;
-      text-align: left;       /* 전체 왼쪽 정렬 */
-    }
+        .image-wrapper {
+            text-align: center;
+        }
 
-    .image-wrapper {
-      margin: 5px 0;          /* 이미지 위아래 간격 최소화 */
-    }
+        img {
+            display: block;
+            max-width: 300px; /* 이미지 크기 조절 (필요시 수정) */
+            height: auto;
+            border: 1px solid #ccc;
+        }
 
-    img {
-      display: block;         /* 이미지 아래 여백 제거 */
-      margin: 0;
-    }
+        .links {
+            margin-top: 20px;
+        }
 
-    p {
-      margin: 8px 0;
-    }
+        a {
+            display: block;
+            margin: 10px 0;
+            font-size: 18px;
+            color: #0066cc;
+            text-decoration: none;
+        }
 
-    a {
-      display: block;
-      margin: 8px 0;
-      font-size: 18px;
-    }
-  </style>
+        a:hover { text-decoration: underline; }
+    </style>
 </head>
-
 <body>
 
-  <!-- 이미지 두 개를 위쪽으로 배치 -->
-  <div class="image-wrapper">
-    <img src="screen.png" alt="screen" width="400">
-  </div>
+    <!-- 상단 이미지 배치 구역 -->
+    <div class="image-container">
+        <div class="image-wrapper">
+            <p>첫 번째 그림 (왼쪽)</p>
+            <img src="screen.png" alt="스크린샷 1">
+        </div>
+        <div class="image-wrapper">
+            <p>두 번째 그림 (오른쪽)</p>
+            <img src="screen2.png" alt="스크린샷 2">
+        </div>
+    </div>
 
-  <div class="image-wrapper">
-    <img src="screen2.png" alt="screen2" width="400">
-  </div>
+    <hr>
 
-  <p><b>Folders for quick access. Click a path to navigate, or select a file to open it in gedit.</b></p>
-  <p><b>Using Ubuntu 24.04 environment, dependency: libgtk-3-0t64 (>= 3.24.41)</b></p>
-  <p><b>Compiled using gcc version 13.3.0</b></p>
+    <div class="links">
+        <h1>Folder 다운로드</h1>
+        <a href="folder1.0.zip">📂 1. folder1.0 압축 풀고 deb 설치</a>
+        <a href="folder.zip">📂 2. 수정 파일 업그레이드 (folder.zip)</a>
+    </div>
 
-  <p><b>첫번째 folder1.0 압축 풀고 deb 파일 설치 후</b></p>
-  <p><b>두번째 수정 파일 업그레이드 파일 folder.zip 압축 풀면 실행 파일 생성</b></p>
-  <p><b>sudo mv -rf folder /usr/local/bin</b></p>
-  <p><b>삭제 기능 추가 및 관리자 폴더 이동 전용 스위치 추가</b></p>
-
-  <a href="https://github.com/kj92001/folder/releases">
-    GitHub Releases 바로가기
-  </a>
-
-  <a href="folder1.0.zip" download>📦 deb 파일 다운로드</a>
-  <a href="folder.zip" download>🔧 패치 파일 다운로드</a>
+    <p><strong>설치 명령어:</strong> <code>sudo mv folder /usr/local/bin</code></p>
 
 </body>
 </html>
+
