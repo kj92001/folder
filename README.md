@@ -1,26 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <title>Folder 다운로드 페이지</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .image-wrapper {
+      margin: 20px 0;
+    }
+    a {
+      display: block;
+      margin: 10px;
+      font-size: 18px;
+    }
+  </style>
 </head>
+
 <body>
+
   <div class="image-wrapper">
-    <img src="screen.png" alt="screen" width="400" height="300">
+    <img src="screen.png" alt="screen" width="400">
   </div>
-  <b> folders for quick access. Click a path to navigate, or select a file to open it in gedit. </b>
-  <b> Using Ubuntu 24.04 environment, dependency program libgtk-3-0t64 (>= 3.24.41) </b>
-  <b>Compiled using gcc version 13.3.0 </b>
-  
-  <b>첫번째 folder1.0 압축풀고 deb 파일 설치후 </b>
-  <b>두번째 수정 파일  업그래이드된 파일folder.zip 압축 풀면 실행 파일 생김 sudo mv -rf folder /usr/local/bin </b>
-  <b> 삭제기능 추가과 관리자 폴더 이동전용 스위치 넣음 </b>
-  <b> https://github.com/kj92001/folder/releases/download </b>
-  
+
+  <p><b>Folders for quick access. Click a path to navigate, or select a file to open it in gedit.</b></p>
+  <p><b>Using Ubuntu 24.04 environment, dependency: libgtk-3-0t64 (>= 3.24.41)</b></p>
+  <p><b>Compiled using gcc version 13.3.0</b></p>
+
+  <p><b>첫번째 folder1.0 압축 풀고 deb 파일 설치 후</b></p>
+  <p><b>두번째 수정 파일 업그레이드 파일 folder.zip 압축 풀면 실행 파일 생성</b></p>
+  <p><b>sudo mv -rf folder /usr/local/bin</b></p>
+  <p><b>삭제 기능 추가 및 관리자 폴더 이동 전용 스위치 추가</b></p>
+
+  <p>
+    <a href="https://github.com/kj92001/folder/releases">GitHub Releases 바로가기</a>
+  </p>
 
   <div class="image-wrapper">
-    <img src="screen2.png" alt="screen" width="400" height="300">
-  </div> 
-   <pre>
-   <a href="folder1.0.zip" download>deb 파일 다운로드</a>
-   <a href="folder.zip" download>패치 파일 다운로드</a>
-   </pre>
- </body>
+    <img src="screen2.png" alt="screen2" width="400">
+  </div>
 
+  <a href="folder1.0.zip" download>📦 deb 파일 다운로드</a>
+  <a href="folder.zip" download>🔧 패치 파일 다운로드</a>
+
+</body>
+</html>
