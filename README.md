@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -35,6 +36,11 @@
 
 <body>
 
+=======
+<html lang="ko">
+<body>
+
+>>>>>>> origin/main
   <!-- 이미지 두 개를 위쪽으로 배치 -->
   <div class="image-wrapper">
     <img src="screen.png" alt="screen" width="400">
