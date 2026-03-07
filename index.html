@@ -19,11 +19,15 @@
       margin-bottom: 20px; /* 이미지 아래쪽 본문과의 간격 */
     }
 
+    .image-wrapper {
+      flex: 1;             /* 두 이미지가 동일한 폭을 차지 */
+    }
+
     .image-wrapper img {
       display: block;
-      width: 400px;        /* 동일한 너비 */
-      height: 300px;       /* 동일한 높이 */
-      object-fit: cover;   /* 영역을 꽉 채워 동일 크기로 표시 */
+      width: 100%;         /* 부모 영역에 맞게 채움 */
+      height: auto;        /* 원본 비율 유지 */
+      object-fit: contain; /* 잘리지 않고 전체 표시 */
     }
 
     p {
@@ -61,11 +65,9 @@
   <p><b>Using Ubuntu 24.04 environment, dependency: libgtk-3-0t64 (>= 3.24.41)</b></p>
   <p><b>Compiled using gcc version 13.3.0</b></p>
 
-  <!-- 수평 줄 제거됨 -->
-
   <p><b>첫번째 folder1.0 압축 풀고 deb 파일 설치 후</b></p>
   <p><b>두번째 수정 파일 업그레이드 파일 folder.zip 압축 풀면 실행 파일 생성</b></p>
-  <p><code>sudo mv -rf folder /usr/local/bin</code></p> <!-- 코드는 code 태그 사용 추천 -->
+  <p><code>sudo mv -rf folder /usr/local/bin</code></p>
   <p><b>삭제 기능 추가 및 관리자 폴더 이동 전용 스위치 추가</b></p>
 
   <br>
