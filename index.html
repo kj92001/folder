@@ -3,55 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <title>Folder 다운로드 페이지</title>
-
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Pretendard', Arial, sans-serif;
       margin: 0;
-      padding: 20px;
-      text-align: left;
+      padding: 30px;
+      line-height: 1.6;
+      color: #333;
     }
 
-    /* 이미지 두 개를 가로로 나열하기 위한 설정 */
+    /* 1. 이미지 수평 정렬 및 간격 조절 */
     .image-container {
       display: flex;       /* 가로 정렬 */
-      gap: 10px;           /* 이미지 사이 간격 */
-      margin-bottom: 20px; /* 이미지 아래쪽 본문과의 간격 */
+      flex-direction: row; /* 수평 방향 유지 */
+      gap: 15px;          /* 이미지 사이 간격 */
+      margin-bottom: 30px;
+      flex-wrap: nowrap;   /* 화면이 좁아도 아래로 떨어지지 않게 설정 */
     }
 
-    .image-wrapper {
-      flex: 1;             /* 두 이미지가 동일한 폭을 차지 */
-    }
-
+    /* 2. 이미지 사이즈 통일 (비율 유지) */
     .image-wrapper img {
+      height: 350px;       /* 고정 높이 (원하시는 크기로 조절 가능) */
+      width: auto;         /* 가로 길이는 비율에 맞춰 자동 조절 */
+      border-radius: 8px;  /* 모서리 부드럽게 */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 약간의 입체감 */
       display: block;
-      width: 100%;         /* 부모 영역에 맞게 채움 */
-      height: auto;        /* 원본 비율 유지 */
-      object-fit: contain; /* 잘리지 않고 전체 표시 */
     }
 
+    /* 3. 불필요한 선(hr) 삭제는 아래 스타일에서 관리하거나 HTML에서 제거 */
+    
     p {
-      margin: 8px 0;
-      line-height: 1.6;    /* 가독성을 위해 줄간격 추가 */
+      margin: 12px 0;
     }
 
-    a {
-      display: block;
-      margin: 10px 0;
-      font-size: 18px;
-      color: #0366d6;
+    code {
+      background-color: #f1f1f1;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95em;
+    }
+
+    .download-link {
+      display: inline-block;
+      margin: 10px 10px 10px 0;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #0366d6;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    .download-link:hover {
+      background-color: #024ea2;
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .github-link {
+      background-color: #24292e;
     }
   </style>
 </head>
-
 <body>
 
-  <!-- 이미지를 가로로 배치 (좌측 screen, 우측 screen2) -->
   <div class="image-container">
     <div class="image-wrapper">
       <img src="screen.png" alt="screen">
@@ -61,24 +77,22 @@
     </div>
   </div>
 
-  <p><b>Folders for quick access. Click a path to navigate, or select a file to open it in gedit.</b></p>
-  <p><b>Using Ubuntu 24.04 environment, dependency: libgtk-3-0t64 (>= 3.24.41)</b></p>
-  <p><b>Compiled using gcc version 13.3.0</b></p>
+  <p><strong>Folders for quick access. Click a path to navigate, or select a file to open it in gedit.</strong></p>
+  <p><strong>Using Ubuntu 24.04 environment, dependency: libgtk-3-0t64 (>= 3.24.41)</strong></p>
+  <p><strong>Compiled using gcc version 13.3.0</strong></p>
 
-  <p><b>첫번째 folder1.0 압축 풀고 deb 파일 설치 후</b></p>
-  <p><b>두번째 수정 파일 업그레이드 파일 folder.zip 압축 풀면 실행 파일 생성</b></p>
-  <p><code>sudo mv -rf folder /usr/local/bin</code></p>
-  <p><b>삭제 기능 추가 및 관리자 폴더 이동 전용 스위치 추가</b></p>
+  <p>✅ <strong>첫 번째:</strong> folder1.0 압축 풀고 deb 파일 설치를 진행하세요.</p>
+  <p>✅ <strong>두 번째:</strong> 수정된 업그레이드 파일(folder.zip)의 압축을 풀면 실행 파일이 생성됩니다.</p>
+  
+  <p><code>sudo mv folder /usr/local/bin</code></p>
+  
+  <p>💡 <strong>추가 기능:</strong> 삭제 기능 및 관리자 폴더 이동 전용 스위치가 추가되었습니다.</p>
 
-  <br>
-
-  <a href="https://github.com/kj92001/folder/releases">
-    🚀 GitHub Releases 바로가기
-  </a>
-
-  <a href="folder1.0.zip" download>📦 deb 파일 다운로드</a>
-  <a href="folder.zip" download>🔧 패치 파일 다운로드</a>
+  <div style="margin-top: 20px;">
+    <a href="https://github.com/kj92001/folder/releases" class="download-link github-link">🚀 GitHub Releases 바로가기</a>
+    <a href="folder1.0.zip" download class="download-link">📦 deb 파일 다운로드</a>
+    <a href="folder.zip" download class="download-link">🔧 패치 파일 다운로드</a>
+  </div>
 
 </body>
 </html>
-
