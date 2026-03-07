@@ -1,8 +1,4 @@
-<!DOCTYPE html>
 <html lang="ko">
-
-</head>
-
 <body>
 
   <!-- 이미지 두 개를 위쪽으로 배치 -->
