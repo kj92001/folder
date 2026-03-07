@@ -1,39 +1,5 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
+
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>Folder 다운로드 페이지</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;              /* 기본 여백 제거 */
-      padding: 20px;
-      text-align: left;       /* 전체 왼쪽 정렬 */
-    }
-
-    .image-wrapper {
-      margin: 5px 0;          /* 이미지 위아래 간격 최소화 */
-    }
-
-    img {
-      display: block;         /* 이미지 아래 여백 제거 */
-      margin: 0;
-    }
-
-    p {
-      margin: 8px 0;
-    }
-
-    a {
-      display: block;
-      margin: 8px 0;
-      font-size: 18px;
-    }
-  </style>
-</head>
-
 <body>
 
 =======
