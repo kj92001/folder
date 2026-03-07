@@ -1,98 +1,164 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>Folder 다운로드 페이지</title>
-  <style>
-    body {
-      font-family: 'Pretendard', Arial, sans-serif;
-      margin: 0;
-      padding: 30px;
-      line-height: 1.6;
-      color: #333;
-    }
+<meta charset="UTF-8">
+<title>Folder 다운로드 페이지</title>
 
-    /* 1. 이미지 수평 정렬 및 간격 조절 */
-    .image-container {
-      display: flex;       /* 가로 정렬 */
-      flex-direction: row; /* 수평 방향 유지 */
-      gap: 15px;          /* 이미지 사이 간격 */
-      margin-bottom: 30px;
-      flex-wrap: nowrap;   /* 화면이 좁아도 아래로 떨어지지 않게 설정 */
-    }
+<style>
+body {
+  font-family: 'Pretendard', Arial, sans-serif;
+  margin: 0;
+  padding: 50px 20px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
 
-    /* 2. 이미지 사이즈 통일 (비율 유지) */
-    .image-wrapper img {
-      height: 350px;       /* 고정 높이 (원하시는 크기로 조절 가능) */
-      width: auto;         /* 가로 길이는 비율에 맞춰 자동 조절 */
-      border-radius: 8px;  /* 모서리 부드럽게 */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 약간의 입체감 */
-      display: block;
-    }
+.container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
 
-    /* 3. 불필요한 선(hr) 삭제는 아래 스타일에서 관리하거나 HTML에서 제거 */
-    
-    p {
-      margin: 12px 0;
-    }
+/* 이미지 컨테이너 */
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
 
-    code {
-      background-color: #f1f1f1;
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-family: monospace;
-      font-size: 0.95em;
-    }
+/* 핵심 수정 */
+.image-wrapper {
+  flex: 1;
+  max-width: 450px;
+  height: 260px;          /* 높이 고정 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .download-link {
-      display: inline-block;
-      margin: 10px 10px 10px 0;
-      padding: 10px 20px;
-      font-size: 16px;
-      color: white;
-      background-color: #0366d6;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.2s;
-    }
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;       /* wrapper 높이에 맞춤 */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  display: block;
+  transition: transform 0.3s ease;
+}
 
-    .download-link:hover {
-      background-color: #024ea2;
-      text-decoration: none;
-    }
+.image-wrapper img:hover {
+  transform: translateY(-5px);
+}
 
-    .github-link {
-      background-color: #24292e;
-    }
-  </style>
+p {
+  margin: 15px 0;
+  word-break: keep-all;
+}
+
+code {
+  background-color: #e9ecef;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95em;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.button-group {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.download-link {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #0366d6;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.download-link:hover {
+  background-color: #024ea2;
+  transform: scale(1.02);
+}
+
+.github-link {
+  background-color: #24292e;
+}
+
+.github-link:hover {
+  background-color: #000;
+}
+
+@media (max-width:600px) {
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-wrapper {
+    width:100%;
+    height:auto;
+  }
+
+  .image-wrapper img {
+    max-width:100%;
+    height:auto;
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <div class="image-container">
-    <div class="image-wrapper">
-      <img src="screen.png" alt="screen">
-    </div>
-    <div class="image-wrapper">
-      <img src="screen2.png" alt="screen2">
-    </div>
+<div class="container">
+
+<div class="image-container">
+  <div class="image-wrapper">
+    <img src="screen.png" alt="screen">
   </div>
 
-  <p><strong>Folders for quick access. Click a path to navigate, or select a file to open it in gedit.</strong></p>
-  <p><strong>Using Ubuntu 24.04 environment, dependency: libgtk-3-0t64 (>= 3.24.41)</strong></p>
-  <p><strong>Compiled using gcc version 13.3.0</strong></p>
-
-  <p>✅ <strong>첫 번째:</strong> folder1.0 압축 풀고 deb 파일 설치를 진행하세요.</p>
-  <p>✅ <strong>두 번째:</strong> 수정된 업그레이드 파일(folder.zip)의 압축을 풀면 실행 파일이 생성됩니다.</p>
-  
-  <p><code>sudo mv folder /usr/local/bin</code></p>
-  
-  <p>💡 <strong>추가 기능:</strong> 삭제 기능 및 관리자 폴더 이동 전용 스위치가 추가되었습니다.</p>
-
-  <div style="margin-top: 20px;">
-    <a href="https://github.com/kj92001/folder/releases" class="download-link github-link">🚀 GitHub Releases 바로가기</a>
-    <a href="folder1.0.zip" download class="download-link">📦 deb 파일 다운로드</a>
-    <a href="folder.zip" download class="download-link">🔧 패치 파일 다운로드</a>
+  <div class="image-wrapper">
+    <img src="screen2.png" alt="screen2">
   </div>
+</div>
+
+<p><strong>Folders for quick access. Click a path to navigate, or select a file to open it in gedit.</strong></p>
+
+<p style="color:#666;font-size:0.9em;">
+Using Ubuntu 24.04 environment, dependency: libgtk-3-0t64 (>= 3.24.41)<br>
+Compiled using gcc version 13.3.0
+</p>
+
+<hr style="border:0;height:1px;background:#eee;margin:30px 0;">
+
+<p>✅ <strong>첫 번째:</strong> folder1.0 압축 풀고 deb 파일 설치를 진행하세요.</p>
+<p>✅ <strong>두 번째:</strong> 수정된 업그레이드 파일(folder.zip)의 압축을 풀면 실행 파일이 생성됩니다.</p>
+
+<code>sudo mv folder /usr/local/bin</code>
+
+<p>💡 <strong>추가 기능:</strong> 삭제 기능 및 관리자 폴더 이동 전용 스위치가 추가되었습니다.</p>
+
+<div class="button-group">
+<a href="https://github.com/kj92001/folder/releases" class="download-link github-link">🚀 GitHub Releases 바로가기</a>
+<a href="folder1.0.zip" download class="download-link">📦 deb 파일 다운로드</a>
+<a href="folder.zip" download class="download-link">🔧 패치 파일 다운로드</a>
+</div>
+
+</div>
 
 </body>
 </html>
