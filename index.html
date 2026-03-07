@@ -15,14 +15,15 @@
     /* 이미지 두 개를 가로로 나열하기 위한 설정 */
     .image-container {
       display: flex;       /* 가로 정렬 */
-      gap: 10px;          /* 이미지 사이 간격 */
+      gap: 10px;           /* 이미지 사이 간격 */
       margin-bottom: 20px; /* 이미지 아래쪽 본문과의 간격 */
     }
 
     .image-wrapper img {
       display: block;
-      width: 400px;       /* 이미지 크기 고정 */
-      height: auto;
+      width: 400px;        /* 동일한 너비 */
+      height: 300px;       /* 동일한 높이 */
+      object-fit: fill; /* 원본 비율 왜곡 될수 있음 */
     }
 
     p {
