@@ -10,8 +10,8 @@ body {
   margin: 0;
   padding: 50px 20px;
   line-height: 1.6;
-  color: #333;
-  background-color: #f8f9fa;
+  color: #e6edf3;
+  background-color: #0d1117;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,11 +32,10 @@ body {
   margin-bottom: 40px;
 }
 
-/* 핵심 수정 */
 .image-wrapper {
   flex: 1;
   max-width: 450px;
-  height: 260px;          /* 높이 고정 */
+  height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,9 +43,9 @@ body {
 
 .image-wrapper img {
   max-width: 100%;
-  max-height: 100%;       /* wrapper 높이에 맞춤 */
+  max-height: 100%;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
   display: block;
   transition: transform 0.3s ease;
 }
@@ -60,14 +59,27 @@ p {
   word-break: keep-all;
 }
 
+.small-note {
+  color: #9da7b3;
+  font-size: 0.9em;
+}
+
 code {
-  background-color: #e9ecef;
+  background-color: #161b22;
+  color: #e6edf3;
   padding: 6px 12px;
   border-radius: 6px;
   font-family: 'Courier New', monospace;
   font-size: 0.95em;
   display: inline-block;
   margin: 10px 0;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #30363d;
+  margin: 30px 0;
 }
 
 .button-group {
@@ -84,23 +96,23 @@ code {
   font-size: 16px;
   font-weight: 600;
   color: white;
-  background-color: #0366d6;
+  background-color: #238636;
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.2s;
 }
 
 .download-link:hover {
-  background-color: #024ea2;
-  transform: scale(1.02);
+  background-color: #2ea043;
+  transform: scale(1.03);
 }
 
 .github-link {
-  background-color: #24292e;
+  background-color: #30363d;
 }
 
 .github-link:hover {
-  background-color: #000;
+  background-color: #484f58;
 }
 
 @media (max-width:600px) {
@@ -138,12 +150,12 @@ code {
 
 <p><strong>Folders for quick access. Click a path to navigate, or select a file to open it in gedit.</strong></p>
 
-<p style="color:#666;font-size:0.9em;">
+<p class="small-note">
 Using Ubuntu 24.04 environment, dependency: libgtk-3-0t64 (>= 3.24.41)<br>
 Compiled using gcc version 13.3.0
 </p>
 
-<hr style="border:0;height:1px;background:#eee;margin:30px 0;">
+<hr>
 
 <p>✅ <strong>첫 번째:</strong> folder1.0 압축 풀고 deb 파일 설치를 진행하세요.</p>
 <p>✅ <strong>두 번째:</strong> 수정된 업그레이드 파일(folder.zip)의 압축을 풀면 실행 파일이 생성됩니다.</p>
