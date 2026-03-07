@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>Folder 다운로드 페이지</title>
-
 
 <html lang="ko">
 <body>
